@@ -1,0 +1,114 @@
+
+(defpoll day 
+  :interval "86400s"
+  "countdown 'Day #' pass && wsctrl -w 1 update"
+)
+
+(defpoll time
+  :interval "60s"
+  "date '+%H:%M'"
+)
+
+
+(defvar ws1 "")
+(defvar ws3 "")
+(defvar ws5 "")
+(defvar ws7 "")
+(defvar ws9 "")
+
+(defvar ws2 "")
+(defvar ws4 "")
+(defvar ws6 "")
+(defvar ws8 "")
+(defvar ws10 "")
+
+
+(defwidget OddWorkspaces []
+  (box
+  (box (var :value ws1))
+  (box (var :value ws3))
+  (box (var :value ws5))
+  (box (var :value ws7))
+  (box (var :value ws9))
+  )
+)
+
+(defwidget EvenWorkspaces []
+  (box
+  (box (var :value ws2))
+  (box (var :value ws4))
+  (box (var :value ws6))
+  (box (var :value ws8))
+  (box (var :value ws10))
+  )
+)
+
+(defwidget var [value]
+  "${value}"
+)
+
+(defwidget separator [value]
+  {value ? "󰇝": " "}
+)
+
+
+(defwidget primaryBar []
+  (box 
+    (box :orientation "h" :halign "start" :space-evenly false 
+      (box (separator :value false))
+      (box (var :value " ${round(EWW_RAM.used_mem_perc,0)}%"))
+      (box (separator :value false))
+      (box (var :value " ${round(EWW_CPU.avg,0)}%"))
+      (box (separator :value false))
+      (box (var :value "󰋊 ${round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}%")))
+    (box (OddWorkspaces))
+    (box :orientation "h" :halign "end" :space-evenly false 
+      (box (separator :value true))
+      (box (var :value day))
+      (box (separator :value true))
+      (box (var :value time))
+      (box (separator :value false)))
+    )
+)
+(defwidget secondaryBar []
+  (box 
+    (box :orientation "h" :halign "start" :space-evenly false 
+      (box (separator :value false))
+      (box (var :value " ${round(EWW_RAM.used_mem_perc,0)}%"))
+      (box (separator :value false))
+      (box (var :value " ${round(EWW_CPU.avg,0)}%"))
+      (box (separator :value false))
+      (box (var :value "󰋊 ${round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}%")))
+    (box (EvenWorkspaces))
+    (box :orientation "h" :halign "end" :space-evenly false 
+      (box (separator :value true))
+      (box (var :value day))
+      (box (separator :value true))
+      (box (var :value time))
+      (box (separator :value false)))
+    )
+)
+
+(defwindow bar0
+  :monitor 0
+  :geometry (geometry 
+    :x "0"
+    :y "0"
+    :width "640px"
+    :height "20px"
+    :anchor "bottom center")
+    :exclusive true
+  (box :class "bar" (primaryBar))
+)
+(defwindow bar1
+  :monitor 1
+  :geometry (geometry 
+    :x "0"
+    :y "0"
+    :width "640px"
+    :height "20px"
+    :anchor "bottom center")
+    :exclusive true
+  (box :class "bar" (secondaryBar))
+)
+

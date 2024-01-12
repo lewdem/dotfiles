@@ -1,0 +1,3 @@
+exec swayidle -w timeout 300 "swaylock -f" timeout 600 "swaymsg 'output * power off'" resume "swaymsg 'output * power on'" 
+exec persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -l 'mark --add _prev' --default-layout spiral
+exec eww open-many bar0 bar1 

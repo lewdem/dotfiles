@@ -1,0 +1,20 @@
+
+### Shortcuts Variables
+set $mod Mod4
+set $left Left
+set $down Down
+set $up Up
+set $right Right
+
+### Default Applications
+set $term foot
+set $menu fuzzel
+set $lock swaylock
+
+### Output Variables
+set $wallpaper ~/Images/Wallpapers/wallpaper
+set $cl_high #b4befe
+set $cl_back #1e1e2e
+set $cl_fore #cdd6f4
+set $cl_urge #f38ba8
+set $cl_void #00000000

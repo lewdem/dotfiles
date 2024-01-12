@@ -1,0 +1,50 @@
+#### Options ####
+clock
+indicator
+screenshot
+ignore-empty-password
+disable-caps-lock-text
+
+#### Settings ####
+## Font
+font=JetBrainsMono Nerd Font
+font-size=75
+
+## Inner String
+timestr=
+datestr=
+
+## Indicator
+indicator-thickness=7
+indicator-radius=60
+
+#### Effects ####
+effect-blur=7x5
+effect-vignette=0.9:0.5
+
+#### Colors ####
+## Normal
+separator-color=00000000
+inside-color=11111bdd
+key-hl-color=a6e3a1
+text-color=cdd6f4
+ring-color=11111bdd
+line-color=00000000
+
+## Ver
+text-ver-color=00000000
+ring-ver-color=a6e3a1
+line-ver-color=11111b88
+inside-ver-color=11111be8
+
+## Clear
+text-clear-color=00000000
+ring-clear-color=cdd6f4
+line-clear-color=11111b88
+inside-clear-color=11111be8
+
+## Wrong
+text-wrong-color=00000000
+line-wrong-color=11111b88
+inside-wrong-color=11111be8
+ring-wrong-color=
