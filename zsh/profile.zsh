@@ -1,5 +1,3 @@
-
-
 HISTFILE=~/.config/zsh/history
 HISTSIZE=10000
 SAVEHIST=5000
@@ -28,7 +26,17 @@ function chpwd-osc7-pwd() {
 }
 
 function xplr() {
-    cd $(/bin/xplr $@ )
+    dir=$( /bin/xplr $1)
+    
+    if [ -f $dir ]; then
+        if test -z "$dir" 
+        then
+            dir=$(pwd)
+        else
+            dir=$(dirname $dir)
+        fi
+    fi
+    cd $dir
 }
 
 autoload -Uz add-zsh-hook
