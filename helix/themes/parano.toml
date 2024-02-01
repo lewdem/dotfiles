@@ -11,7 +11,7 @@
 "comment" = { fg = "gray", modifiers = ["italic"] }
 "variable" = "foreground"
 "label" = "orange"
-"punctuation" = "peach"
+"punctuation" = "foreground"
 "keyword" = "orange"
 "operator" = "orange"
 "function" = "yellow"
