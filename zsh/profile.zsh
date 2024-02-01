@@ -1,3 +1,5 @@
+source ~/.config/zsh/env.zsh
+
 HISTFILE=~/.config/zsh/history
 HISTSIZE=10000
 SAVEHIST=5000
@@ -5,16 +7,10 @@ PATH=$PATH:~/.cargo/bin:~/Scripts
 
 alias hx='helix'
 alias ls='lsd'
-alias ll='lsd --long --header --git'
 alias cat='bat'
 alias tree='ls --tree'
 alias py='python'
-
-export EDITOR='helix'
-export GIT_EDITOR=$EDITOR
-export GIT_TOKEN='1234567890yuio'
-export WM='sway'
-export PF_INFO="ascii title os host kernel cpu uptime memory"
+alias get-token='echo $GIT_TOKEN | wl-copy'
 
 function osc7-pwd() {
     emulate -L zsh # also sets localoptions for us
