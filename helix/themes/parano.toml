@@ -11,12 +11,13 @@
 "comment" = { fg = "gray", modifiers = ["italic"] }
 "variable" = "foreground"
 "label" = "orange"
-"punctuation" = "foreground"
+"punctuation" = "peach"
 "keyword" = "orange"
 "operator" = "orange"
 "function" = "yellow"
 "tag" = "blue"
 "namespace" = "blue"
+
 "markup.heading" = "orange"
 "markup.list" = "yellow"
 "markup.bold" = { fg = "orange", modifiers = ["bold"] }
@@ -27,6 +28,7 @@
 "markup.link.text" = "yellow"
 "markup.link.label" = "green"
 "markup.quote" = "yellow"
+
 "diff.plus" =  "green"
 "diff.minus" = "red"
 "diff.delta" = "yellow"
@@ -100,3 +102,4 @@ green = "#a6e3a1"
 # cyan = "#89dceb"
 # magenta = "#cba6f7"
 black = "#1e1e2e"
+peach = "#f2cdcd"

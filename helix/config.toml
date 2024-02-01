@@ -16,7 +16,7 @@ hidden = false
 
 [editor.indent-guides]
 render = true
-character = "╎"
+character = "│"
 skip-levels = 1
 
 [editor.whitespace.render]
