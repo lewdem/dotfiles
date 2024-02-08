@@ -1,9 +1,7 @@
 # Based on the AYU theme colors from https://github.com/dempfi/ayu
 
 # Syntax highlighting
-"type" = "blue"
-"type.builtin" = "blue"
-"constructor" = "green"
+"type" = {fg = "blue", modifiers = ["bold"] }
 "constant" = "magenta"
 "string" = "green"
 "string.regexp" = "orange"
@@ -11,8 +9,9 @@
 "comment" = { fg = "gray", modifiers = ["italic"] }
 "variable" = "foreground"
 "label" = "orange"
-"punctuation" = "foreground"
-"keyword" = "orange"
+"punctuation" = "light_gray"
+"punctuation.special" = "foreground"
+"keyword" = {fg = "orange", modifiers = ["bold"]}
 "operator" = "orange"
 "function" = "yellow"
 "tag" = "blue"
@@ -59,8 +58,8 @@
 "ui.selection" = { bg = "dark_gray" }
 "warning" = "yellow"
 "error" = { fg = "red", modifiers = ["bold"] }
-"info" = { fg = "blue", modifiers = ["bold"] }
-"hint" = { fg = "blue", modifiers = ["bold"] }
+"info" = { fg = "peach", modifiers = ["bold"] }
+"hint" = { fg = "peach", modifiers = ["bold"] }
 "diagnostic.hint" = { underline = { color = "blue", style="curl"} }
 "diagnostic.info"= { underline = { color = "blue", style="curl"} }
 "diagnostic.warning"= { underline = { color = "yellow", style="curl"} }
@@ -81,6 +80,7 @@ blue = "#59c2ff"
 # dark_gray = "#2d3640"
 cyan = "#73b8ff"
 gray = "#5c6773"
+light_gray = "#9399b2"
 # green = "#aad94c"
 magenta = "#d2a6ff"
 # orange = "#ff8f40"
@@ -102,4 +102,4 @@ green = "#a6e3a1"
 # cyan = "#89dceb"
 # magenta = "#cba6f7"
 black = "#1e1e2e"
-peach = "#f2cdcd"
+peach = "#fab387"

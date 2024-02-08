@@ -14,7 +14,7 @@
     bindsym $mod+l  exec $lock
     
     # Start your launcher
-    bindsym Menu exec $menu
+    bindsym --locked Menu exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
