@@ -2,7 +2,7 @@
 
 # Use custom format
 format = '''
-[┌─\[](bold gray) $directory$rust$package$git_branch[\]](bold gray)
+[┌─\[](bold gray) $directory$rust$python$package$git_branch[\]](bold gray)
 [└](bold gray)[❯](bold green) '''
 
 # Wait 10 milliseconds for starship to check files under the current directory.
@@ -21,3 +21,8 @@ blue = '21'
 # Define new color
 mustard = '#af8700'
 gray = '#45475a'
+
+
+[python]
+symbol = ' '
+
